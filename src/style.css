@@ -34,6 +34,9 @@ color: white;
   background-color:  hsla(0, 0%, 0%, 0);
   box-shadow: -38px -17px 68px 2px rgba(42, 7, 245, 0.2);
 }
+#date-and-time{
+  font-size: 25px;
+   font-weight: bold}
 #city {
   font-size: 34px;
    justify-content: center;

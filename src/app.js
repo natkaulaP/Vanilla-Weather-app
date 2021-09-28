@@ -1,3 +1,28 @@
+function fetchTime() {
+  let date = new Date();
+  let minutes = date.getMinutes();
+  let hour = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thusday",
+    "Friday",
+    "Satday",
+  ];
+  let day = days[date.getDay()];
+  let dateAndTime = document.querySelector("#date-and-time");
+  dateAndTime.innerHTML = `${day} ${hour}:${minutes}`;
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+}
+fetchTime();
+
 function fetchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -29,6 +54,8 @@ function fetchWeather(response) {
   let wind = Math.round(response.data.wind.speed);
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `Wind speed ${wind} km/h`;
+  let date = document.querySelector("#date-and-time");
+  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 function locateUser(position) {
   let latitude = position.coords.latitude;
