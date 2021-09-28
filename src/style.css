@@ -36,3 +36,99 @@ color: white;
   margin: 0 auto;
   display: block;
 }
+#city {
+  font-size: 34px;
+}
+#temp {
+  font-size: 4em;
+  font-weight: lighter;
+}
+#discription {
+  font-size: 35px;
+}
+
+#pressure {
+  font-size: 30px;
+}
+
+#humidity {
+  font-size: 30px;
+}
+
+#wind {
+  font-size: 30px;
+}
+ #search-input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+  border-radius: 20px;
+  height: 2.5em;
+  border: none;
+  outline: none;
+  background: #7c7c7c2b;
+  padding: 2px;
+  color:white;
+}
+#search {
+  display: block;
+  margin: 0 auto;
+}
+
+#future-weather-forecast{
+   background:rgba(24,24,27,0.8);
+  padding:25px;
+  position:flex;
+  bottom:0;
+display:flex;
+width:100%;
+align-items:center;
+justify-content:center;
+border-radius: 20px;
+border: 1px solid #fff;
+}
+#future-weather-forecast .today {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#future-weather-forecast .today .day{
+  background:#3c3c44;
+  padding: 5px 15px;
+  border-radius: 50px; 
+  text-align:center;
+}
+#future-weather-forecast .today .temp{
+  font-size:30px;
+padding-top:15px;
+}
+#future-weather-forecast #weather-forecast{
+  display:flex;
+}
+.weather-forecast .weather-forecast-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin:0px 10px;
+border: 1px solid #fff;
+border-radius: 10px; 
+padding: 15px
+}
+.weather-forecast .weather-forecast-item .day{
+  padding: 5px 15px;
+background:#3c3c44;
+border-radius:50px; 
+text-align: center;
+} 
+.weather-forecast .weather-forecast-item .temp{
+  font-weight: 100;
+}
+@media only screen and (max-width:730px){
+  .future-weather-forecast{
+    justify-content: start;
+    align-items:none;
+    overflow: scroll;
+  }
+}
