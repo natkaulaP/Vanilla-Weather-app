@@ -1,7 +1,13 @@
 function fetchTime() {
   let date = new Date();
   let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
   let days = [
     "Sunday",
     "Monday",
@@ -14,12 +20,8 @@ function fetchTime() {
   let day = days[date.getDay()];
   let dateAndTime = document.querySelector("#date-and-time");
   dateAndTime.innerHTML = `${day} ${hour}:${minutes}`;
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  
+  
 }
 fetchTime();
 
@@ -39,7 +41,6 @@ let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", fetchCity);
 
 function fetchWeather(response) {
-  console.log(response.data.main.pressure);
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
@@ -56,6 +57,12 @@ function fetchWeather(response) {
   windSpeed.innerHTML = `Wind speed ${wind} km/h`;
   let date = document.querySelector("#date-and-time");
   date.innerHTML = formatDate(response.data.dt * 1000);
+  const img1 = document.getElementById("#icon");
+  img1.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  
 }
 function locateUser(position) {
   let latitude = position.coords.latitude;
