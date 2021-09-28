@@ -57,8 +57,8 @@ function fetchWeather(response) {
   windSpeed.innerHTML = `Wind speed ${wind} km/h`;
   let date = document.querySelector("#date-and-time");
   date.innerHTML = formatDate(response.data.dt * 1000);
-  const img1 = document.getElementById("#icon");
-  img1.setAttribute(
+ let icon =document.querySelector("#icon");
+ icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
