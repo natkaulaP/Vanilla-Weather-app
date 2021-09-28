@@ -77,7 +77,7 @@ color: white;
 }
 
 #future-weather-forecast{
-   background:rgba(24,24,27,0.8);
+   background:#000000d0;
   padding:25px;
   position:flex;
   bottom:0;
