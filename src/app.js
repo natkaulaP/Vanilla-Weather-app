@@ -62,8 +62,10 @@ function fetchWeather(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  
+  icon.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemp =response.data.main.temp;
 }
+
 function locateUser(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -72,8 +74,39 @@ function locateUser(position) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(fetchWeather);
 }
 
+function fetchFahrenheit(event){
+  event.preventDefault();
+let temp = document.querySelector("#temp");
+let fahrenheitTemp = (celsiusTemp * 9)/5+32;
+temp.innerHTML = Math.round(fahrenheitTemp);
+celsius.classList.remove("active");
+fahrenheit.classList.add("active");
+}
+
+
+function fetchCelsius(event){
+  event.preventDefault();
+let temp = document.querySelector("#temp");
+celsius.classList.add("active");
+fahrenheit.classList.remove("active");
+temp.innerHTML = Math.round(celsiusTemp)
+}
+
+
+
+
 function getCurrentPosition(position) {
   navigator.geolocation.getCurrentPosition(locateUser);
 }
+let celsiusTemp=null;
+
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentPosition);
+  
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit")
+fahrenheitLink.addEventListener("click", fetchFahrenheit)
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", fetchCelsius)

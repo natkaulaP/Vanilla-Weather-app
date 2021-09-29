@@ -43,6 +43,11 @@ color: white;
   align-items: center;
   margin:0 auto;
 }
+#fahrenheit{
+  position: relative;
+  font-size: 18px;
+  top: 50
+}
 #temp {
   font-size: 4em;
   font-weight: lighter;
@@ -80,64 +85,11 @@ color: white;
   margin: 0 auto;
 }
 
-#future-weather-forecast{
-   background:#000000d0;
-  padding:25px;
-  position:flex;
-  bottom:0;
-display:flex;
-width:100%;
-align-items:center;
-justify-content:center;
-border-radius: 20px;
-border: 1px solid #fff;
-color: black;
-background-color:  hsla(0, 0%, 0%, 0);
-box-shadow: -38px -17px 68px 54px rgba(42, 7, 245, 0.2);
+.label {
+ font-size: 15px;
+ color: cornsilk;
+text-decoration: underline ;
 }
-#future-weather-forecast .today {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-#future-weather-forecast .today .day{
-  background:#3c3c44;
-  padding: 5px 15px;
-  border-radius: 50px; 
-  text-align:center;
-  color:white;
-}
-#future-weather-forecast .today .temp{
-  font-size:30px;
-padding-top:15px;
-}
-#future-weather-forecast #weather-forecast{
-  display:flex;
-}
-.weather-forecast .weather-forecast-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  margin:0px 10px;
-border: 1px solid #fff;
-border-radius: 10px; 
-padding: 15px
-}
-.weather-forecast .weather-forecast-item .day{
-  padding: 5px 15px;
-background:#3c3c44;
-border-radius:50px; 
-text-align: center;
-color:white;
-} 
-.weather-forecast .weather-forecast-item .temp{
-  font-weight: 100;
-}
-@media only screen and (max-width:1030px){
-  .future-weather-forecast{
-    justify-content: start;
-    align-items:none;
-    overflow: scroll;
-  }
-}
+.contact {
+ text-decoration: none;
+ }
