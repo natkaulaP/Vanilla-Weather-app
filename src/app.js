@@ -52,17 +52,18 @@ function fetchWeather(response) {
   let date = document.querySelector("#date-and-time");
  let icon =document.querySelector("#icon");
 
+ let icons = response.data.weather[0].icon;
 celsiusTemp =response.data.main.temp;
- temp.innerHTML = `${temperature}°C`;
+ temp.innerHTML = `${temperature}`;
   city.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].main;
   pressure.innerHTML = `Pressure: ${response.data.main.pressure} mb`;
-  humidity.innerHTML = `Humidity ${response.data.main.humidity} %`;
-windSpeed.innerHTML = `Wind speed ${wind} km/h`;
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity} %`;
+windSpeed.innerHTML = `Wind speed: ${wind} km/h`;
   date.innerHTML = formatDate(response.data.dt * 1000);
   icon.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${icons}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
   

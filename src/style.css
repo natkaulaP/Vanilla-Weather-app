@@ -45,17 +45,17 @@ color: white;
 }#celsius{
    position: relative;
   font-size: 30px;
-  top: -100px;
+  top: -40px;
 }
 #fahrenheit{
  position: relative;
   font-size: 30px;
-  top: -100px;
+  top: -40px;
 }
 #divider{
   position: relative;
   font-size: 30px;
-  top: -100px;
+  top: -40px;
 }
 #temp {
   font-size: 4em;
