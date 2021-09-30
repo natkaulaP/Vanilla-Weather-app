@@ -50,7 +50,7 @@ function fetchWeather(response) {
    let wind = Math.round(response.data.wind.speed);
   let windSpeed = document.querySelector("#wind");
   let date = document.querySelector("#date-and-time");
- let icon =document.querySelector("#icon");
+ let icon =document.querySelector("#w-icon");
 
  let icons = response.data.weather[0].icon;
 celsiusTemp =response.data.main.temp;
