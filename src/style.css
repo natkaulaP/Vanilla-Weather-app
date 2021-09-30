@@ -42,11 +42,20 @@ color: white;
    justify-content: center;
   align-items: center;
   margin:0 auto;
+}#celsius{
+   position: relative;
+  font-size: 30px;
+  top: -100px;
 }
 #fahrenheit{
+ position: relative;
+  font-size: 30px;
+  top: -100px;
+}
+#divider{
   position: relative;
-  font-size: 18px;
-  top: 50
+  font-size: 30px;
+  top: -100px;
 }
 #temp {
   font-size: 4em;
@@ -84,7 +93,14 @@ color: white;
   display: block;
   margin: 0 auto;
 }
-
+.weather .active{
+  color:black;
+cursor:default;
+text-decoration: none;
+}
+.weather .active:hover{
+  text-decoration: none;
+}
 .label {
  font-size: 15px;
  color: cornsilk;
