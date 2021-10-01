@@ -45,22 +45,27 @@ color: white;
    justify-content: center;
   align-items: center;
   margin:0 auto;
-}#celsius{
+}
+#w-icon {
+  font-size: 20px;
+}
+#celsius{
    position: relative;
   font-size: 30px;
- top:-70px;
+ top:-158px;
+ right: -240px;
 }
 #fahrenheit{
  position: relative;
   font-size: 30px;
-      top: -70px;
-   
+      top: -158px;
+   right: -240px;
 }
 #divider{
   position: relative;
   font-size: 30px;
-      top: -70px;
-    
+      top: -158px;
+    right: -240px;
 }
 #temp {
   font-size: 4em;
